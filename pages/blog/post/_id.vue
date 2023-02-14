@@ -1,29 +1,38 @@
 <template>
     <div class="wrapper-content wrapper-content--fixed">
-        <!-- <section class="post">
-            <div class="container">
-                <div class="post-header">
-                    <img class="image" :src="post.img" :alt="post.title">
-                    <h1 class="title">{{ post.title }}</h1>
-                </div>
-                <div class="kkk">
-                    123
-                </div>
-            </div>
-        </section> -->
         <Post :post="post"/>
+        <CommentForm />
+        <CommentsList :comments="comments"/>
   </div>
 </template>
 
 <script>
 import Post from '@/components/Blog/Post.vue'
+import CommentForm from '@/components/Blog/CommentForm.vue'
+import CommentsList from '@/components/Blog/CommentsList.vue'
+
     export default {
-        components: {Post },
+        components: {Post, CommentForm, CommentsList },
         data() {
             return {
                 post: {
                     id: 1, title: 'lalka', description: 'bla bla', img: 'https://www.blessthisstuff.com/imagens/stuff/the-heritage-chief.jpg',
-                }
+                },
+                comments: [
+                    {
+                        user: 1,
+                        text: 'qwe'
+                    },
+                    {
+                        user: 2,
+                        text: 'qwffrfe'
+                    },
+                    {
+                        user: 3,
+                        text: 'qwssssssssssse'
+                    },
+                ]
+
             }
         }
     }
