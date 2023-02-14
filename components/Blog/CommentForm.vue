@@ -12,10 +12,7 @@
 </template>
 
 <script>
-import AppButton from '@/components/UI/Controls/AppButton.vue'
-import AppTextArea from '@/components/UI/Controls/AppTextArea.vue'
     export default {
-        components: { AppButton, AppTextArea },
         data() {
             return {
                 comment: {
