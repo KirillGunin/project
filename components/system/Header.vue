@@ -33,6 +33,10 @@ export default {
           title: "About",
           url: "/about",
         },
+        {
+          title: "Войти",
+          url: "/admin",
+        },
       ],
     };
   },

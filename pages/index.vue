@@ -1,11 +1,13 @@
 <template>
-  <div class="wrapper-content wrapper-content--fixed">
-    <PostsList :posts="posts"/>
-  </div>
+    <div class="wrapper-content wrapper-content--fixed">
+      <div class="container">
+        <PostsList :posts="posts"/>
+      </div>
+    </div>
 </template>
 
 <script>
-import PostsList from '~/components/Blog/PostsList.vue'
+import PostsList from '@/components/Blog/PostsList.vue'
 export default {
   components: { PostsList },
   data() {
