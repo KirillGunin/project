@@ -1,9 +1,8 @@
 <template>
     <div class="wrapper-content wrapper-content--fixed">
         <div class="container">
-            <!-- <h1 class="title">Admin page</h1> -->
             <div class="admin-content">
-                <PostsList :posts="posts"/>
+                <PostsList :admin=true :posts="posts"/>
                 <Menu />
             </div>
         </div>

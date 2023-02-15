@@ -2,7 +2,12 @@
     <section class="posts-list">
         <!-- <div class="container"> -->
             <div class="posts__wrapper">
-                <PostPreview v-for="post in posts" :key="post.id" :post="post"/>
+                <PostPreview
+                    v-for="post in posts"
+                    :key="post.id"
+                    :admin="admin"
+                    :post="post"
+                />
             </div>
         <!-- </div> -->
     </section>
@@ -16,6 +21,10 @@ import PostPreview from '@/components/Blog/PostPreview.vue'
             posts: {
                 type: Array,
                 required: true
+            },
+            admin: {
+                type: Boolean,
+                default: false
             }
         }
     }

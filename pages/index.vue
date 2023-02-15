@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper-content wrapper-content--fixed">
       <div class="container">
-        <PostsList :posts="posts"/>
+        <PostsList :admin=false :posts="posts"/>
       </div>
     </div>
 </template>
