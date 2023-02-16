@@ -1,6 +1,12 @@
 <template>
     <div class="control">
-        <input v-bind="$attrs" :value="value" :type="type" @input="$emit('input', $event.target.value)">
+        <input
+            v-bind="$attrs"
+            :value="value"
+            :type="type"
+            :required="required"
+            @input="$emit('input', $event.target.value)"
+            >
     </div>
 </template>
 
@@ -14,6 +20,10 @@
             type: {
                 type: String,
                 default: 'text'
+            },
+            required: {
+                type: Boolean,
+                default: true
             }
         }
     }
